@@ -11,7 +11,7 @@ class registerController extends Controller
         return view('register');
     }
     public function register(Request $request){
-        
+               
     }
     //
 }
