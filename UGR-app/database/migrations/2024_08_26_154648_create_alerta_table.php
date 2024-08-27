@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('alerta', function (Blueprint $table) {
             $table->integer('idAlerta');
+            //$table->foreignId('idEvento')->constrained()->cascadaOnDelete();
             $table->string('mensaje');
             $table->string('nivel');
             $table->date('fecha');

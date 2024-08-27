@@ -21,10 +21,10 @@ return new class extends Migration
             $table->time('hora');
             $table->string('descripcion');
             $table->string('areaAfectada');
-            $table->integer('idPunto');
-            $table->integer('idAlerta');
-            $table->integer('idResponsable');
-            $table->integer('idRegion');
+            $table->integer('idPunto')->constrained()->cascadaOnDelete();
+            $table->integer('idAlerta')->constrained()->cascadaOnDelete();
+            $table->integer('idResponsable')->constrained()->cascadaOnDelete();;
+            $table->integer('idRegion')->constrained()->cascadaOnDelete();;
             
         });
     }
