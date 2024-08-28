@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('municipio', function (Blueprint $table) {
+            $table->id('idMunicipio');
             $table->integer('nombreMunicipio');
             $table->integer('idRegion')->constrained()->cascadaOnDelete();
             $table->timestamps();
