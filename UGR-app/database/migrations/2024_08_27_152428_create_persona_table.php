@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('apellidoPaterno', 50);
             $table->string('apellidoMaterno', 50);
             $table->date('fechaUpdate', 100);
-
+            $table->integer('idUsuario')->constrained()->cascadaOnDelete();
             $table->timestamps();
         });
     }
