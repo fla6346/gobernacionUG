@@ -12,7 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('evento_adverso_region', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('idEvento');
+            $table->foreignId('idRegion');
             $table->timestamps();
         });
     }

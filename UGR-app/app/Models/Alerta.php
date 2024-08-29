@@ -11,9 +11,9 @@ class Alerta extends Model
     use HasFactory;
 
     public function alert():BelongsTo
-{
+    {
     return $this->belongsTo(EventoAdverso::class);
-}
+    }
    
 }
 /*public function commets():HasMany

@@ -12,7 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('evento_adverso_responsable', function (Blueprint $table) {
-            $table->id();
+            $table->foreignId('idResponsable');
+            $table->foreignId('idEvento');
+            
             $table->timestamps();
         });
     }
