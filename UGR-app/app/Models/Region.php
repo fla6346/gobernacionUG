@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Region extends Model
@@ -14,4 +15,13 @@ class Region extends Model
     {
         return $this->hasMany(Municipio::class);
     }
+    public function evento():BelongsToMany
+    {
+        return $this->belongToMany(EventoAdverso::class);
+    }
+    public function provincia():BelongsToMany
+    {
+        return $this->belongToMany(Provincia::class);
+    }
+    
 }

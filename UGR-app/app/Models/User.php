@@ -45,16 +45,16 @@ class User extends Authenticatable
     ];
 
     public function evento():BelongsToMany
-{
-    return $this->belongToMany(EventoAdverso::class);
-}
+    {
+        return $this->belongToMany(EventoAdverso::class);
+    }
 
-public function Responsable():BelongsToMany
-{
-    return $this->belongToMany(EventoAdverso::class);
-}
-public function Region():BelongsToMany
-{
-    return $this->belongToMany(EventoAdverso::class);
-}
+    public function Responsable():BelongsToMany
+    {
+        return $this->belongToMany(EventoAdverso::class);
+    }
+    public function Region():BelongsToMany
+    {
+        return $this->belongToMany(EventoAdverso::class);
+    }
 }
