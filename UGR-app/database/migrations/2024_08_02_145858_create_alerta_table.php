@@ -13,14 +13,17 @@ return new class extends Migration
     {
         Schema::create('alerta', function (Blueprint $table) {
             $table->id('idAlerta');
-            //$table->foreignId('idEvento')->constrained()->cascadaOnDelete();
+            $table->unsignedBigInteger('idEvento');
+            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
             $table->string('mensaje');
             $table->string('nivel');
             $table->date('fecha');
             $table->string('estado');
+            $table->timestamps();
         });
     }
- /**
+
+    /**
      * Reverse the migrations.
      */
     public function down(): void

@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('evento_adverso', function (Blueprint $table) {
             $table->id('idEvento');
+            //$table->unsignedBigInteger('idPunto');
+            $table->unsignedBigInteger('idAlerta');
+            //$table->foreign('idAlerta')->references('idAlerta')->on('alerta')->onDelete('cascade');
+            $table->unsignedBigInteger('idResponsable');
+
+          //  $table->foreign('idResponsable')->references('idResponsable')->on('responsable')->onDelete('cascade');
+            $table->unsignedBigInteger('idRegion');
+           // $table->foreign('idRegion')->references('idRegion')->on('region')->onDelete('cascade');
+
             $table->string('area');
             $table->string('provincia');
             $table->string('municipio');
@@ -21,10 +30,7 @@ return new class extends Migration
             $table->time('hora');
             $table->string('descripcion');
             $table->string('areaAfectada');
-            $table->integer('idPunto')->constrained()->cascadaOnDelete();
-            $table->integer('idAlerta')->constrained()->cascadaOnDelete();
-            $table->integer('idResponsable')->constrained()->cascadaOnDelete();;
-            $table->integer('idRegion')->constrained()->cascadaOnDelete();;
+           // $table->foreign('idPunto')->references('idPunto')->cascadaOnDelete();
             
         });
     }

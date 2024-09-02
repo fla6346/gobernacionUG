@@ -10,7 +10,7 @@ class Alerta extends Model
 {
     use HasFactory;
 
-    public function alert():BelongsTo
+    public function alerta():BelongsTo
     {
     return $this->belongsTo(EventoAdverso::class);
     }

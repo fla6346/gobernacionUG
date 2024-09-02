@@ -13,7 +13,13 @@ return new class extends Migration
     {
         Schema::create('evento_adverso_region', function (Blueprint $table) {
             $table->foreignId('idEvento');
+
+            //$table->unsignedBigInteger('idMunicipio');
+            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
+
+
             $table->foreignId('idRegion');
+            $table->foreign('idRegion')->references('idRegion')->on('region')->onDelete('cascade');
             $table->timestamps();
         });
     }

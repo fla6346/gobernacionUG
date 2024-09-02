@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('evento_adverso_responsable', function (Blueprint $table) {
             $table->foreignId('idResponsable');
+            $table->foreign('idResponsable')->references('idResponsable')->on('responsable')->onDelete('cascade');
             $table->foreignId('idEvento');
+            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
             
             $table->timestamps();
         });

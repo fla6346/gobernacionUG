@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('localidad');
             $table->string('latitud');
             $table->string('longitud');
-            $table->integer('idMunicipio')->constrained()->cascadaOnDelete();
+            $table->unsignedBigInteger('idMunicipio');
+            $table->foreign('idMunicipio')->references('idMunicipio')->on('municipio')->onDelete('cascade');
             $table->timestamps();
         });
     }

@@ -11,22 +11,19 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('responsable', function (Blueprint $table) {
-            $table->id('idResponsable');
-            $table->string('nombreResponsable');
-            $table->string('unidad');
-            $table->string('cargo');
-            $table->string('correo');
-            $table->string('direccion');
-
+        Schema::create('region', function (Blueprint $table) {
+            $table->id('idRegion');
+            $table->unsignedBigInteger('idEvento');
+            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
+            $table->string('nombreRegion');
         });
     }
-
+   
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('responsable');
+        Schema::dropIfExists('region');
     }
 };

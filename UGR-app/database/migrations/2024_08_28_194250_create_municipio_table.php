@@ -11,19 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('provincia', function (Blueprint $table) {
-            $table->id('idProvincia');
-            $table->string('nombreProvincia', 50);
-            $table->integer('idRegion')->constrained()->cascadaOnDelete();
+        Schema::create('municipio', function (Blueprint $table) {
+            $table->id('idMunicipio');
+            $table->integer('nombreMunicipio');
+            $table->unsignedBigInteger('idProvincia');
+            $table->foreign('idProvincia')->references('idProvincia')->on('provincia')->onDelete('cascade');
             $table->timestamps();
         });
     }
-
+    
     /**
      * Reverse the migrations.
      */
     public function down(): void
     {
-        Schema::dropIfExists('provincia');
+        Schema::dropIfExists('municipio');
     }
 };
