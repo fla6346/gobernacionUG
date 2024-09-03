@@ -13,8 +13,6 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id('idUsuario');
-            //$table->unsignedBigInteger('idPersona');
-           // $table->foreign('idPersona')->references('idPersona')->on('persona')->onDelete('cascade');
             $table->string('userName');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

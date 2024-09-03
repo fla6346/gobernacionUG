@@ -5,6 +5,7 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
@@ -48,13 +49,10 @@ class User extends Authenticatable
     {
         return $this->belongToMany(EventoAdverso::class);
     }
+    public function persona():HasOne
+    {
+        return $this->hasOne(Persona::class);
+    }
 
-    public function Responsable():BelongsToMany
-    {
-        return $this->belongToMany(EventoAdverso::class);
-    }
-    public function Region():BelongsToMany
-    {
-        return $this->belongToMany(EventoAdverso::class);
-    }
+   
 }

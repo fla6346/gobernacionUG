@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Alerta extends Model
 {
     use HasFactory;
-
+//evento adverso tiene muchas alertas
     public function alerta():BelongsTo
     {
     return $this->belongsTo(EventoAdverso::class);

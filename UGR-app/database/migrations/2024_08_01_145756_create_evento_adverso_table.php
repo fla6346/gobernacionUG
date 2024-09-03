@@ -16,7 +16,6 @@ return new class extends Migration
             //$table->unsignedBigInteger('idPunto');
             $table->unsignedBigInteger('idAlerta');
             //$table->foreign('idAlerta')->references('idAlerta')->on('alerta')->onDelete('cascade');
-            $table->unsignedBigInteger('idResponsable');
 
           //  $table->foreign('idResponsable')->references('idResponsable')->on('responsable')->onDelete('cascade');
             $table->unsignedBigInteger('idRegion');

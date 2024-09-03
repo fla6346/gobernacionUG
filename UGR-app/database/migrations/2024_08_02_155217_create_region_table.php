@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('region', function (Blueprint $table) {
             $table->id('idRegion');
-            $table->unsignedBigInteger('idEvento');
-            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
+            //$table->unsignedBigInteger('idEvento');
+            //$table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
             $table->string('nombreRegion');
         });
     }

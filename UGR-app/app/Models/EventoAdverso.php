@@ -11,21 +11,26 @@ class EventoAdverso extends Model
 {
     use HasFactory;
 
-    
-    public function usuario():BelongsToMany
-    {
-        return $this->belongToMany(User::class);
-    }
-    public function region():BelongsToMany
-    {
-        return $this->belongToMany(Region::class);
-    }
-    public function responsable():BelongsToMany
-    {
-        return $this->belongToMany(Responsable::class);
-    }
+    // muchas alertas un solo evento
     public function alerta():HasMany
     {
         return $this->hasMany(Alerta::class);
     }
+    //muchos eventos a muchos responsables
+    public function eventoResponsable():BelongsToMany
+    {
+        return $this->belongToMany(Responsable::class);
+    }
+//muchos eventos a muchas regiones
+    public function eventoRegion():BelongsToMany
+    {
+        return $this->belongToMany(Region::class);
+    }
+    //muchos eventos a muchos usuarios
+    public function eventoUsuario():BelongsToMany
+    {
+        return $this->belongToMany(User::class);
+    }
+   
+    
 }

@@ -11,17 +11,15 @@ class Region extends Model
 {
     use HasFactory;
 
-    public function municipio():HasMany
-    {
-        return $this->hasMany(Municipio::class);
-    }
+   //muchas region pueden tener muchos eventos
     public function evento():BelongsToMany
     {
         return $this->belongToMany(EventoAdverso::class);
     }
-    public function provincia():BelongsToMany
+    //una region tiene muchas provincias
+    public function provincia():HasMany
     {
-        return $this->belongToMany(Provincia::class);
+        return $this->hasMany(Provincia::class);
     }
     
 }

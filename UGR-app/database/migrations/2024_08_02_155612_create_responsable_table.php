@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('responsable', function (Blueprint $table) {
             $table->id('idResponsable');
-            $table->unsignedBigInteger('idEvento');
-            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
+           // $table->unsignedBigInteger('idEvento');
+          //  $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
             $table->string('nombreResponsable');
             $table->string('unidad');
             $table->string('cargo');
