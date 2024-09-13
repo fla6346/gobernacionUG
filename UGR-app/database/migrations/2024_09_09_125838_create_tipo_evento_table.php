@@ -11,16 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('password');
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('habilitado');
-            $table->rememberToken();
+        Schema::create('tipo_evento', function (Blueprint $table) {
+            $table->id('idTipo');
+            $table->integer('nombreTipo');
+            $table->unsignedBigInteger('idEvento');
+            $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
             $table->timestamps();
-
         });
     }
 
@@ -29,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('tipo_evento');
     }
 };

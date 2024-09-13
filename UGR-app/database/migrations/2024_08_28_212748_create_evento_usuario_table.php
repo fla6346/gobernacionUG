@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('evento_usuario', function (Blueprint $table) {
             $table->unsignedBigInteger('idEvento');
             $table->foreign('idEvento')->references('idEvento')->on('evento_adverso')->onDelete('cascade');
-            $table->unsignedBigInteger('idUsuario');
-            $table->foreign('idUsuario')->references('idUsuario')->on('users')->onDelete('cascade');
+            $table->unsignedBigInteger('id');
+            $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }
