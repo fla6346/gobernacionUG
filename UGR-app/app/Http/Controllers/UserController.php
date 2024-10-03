@@ -13,5 +13,9 @@ class UserController extends Controller
         $usuarios=DB::table('users')->get();// select * from evento_adverso
         return view('indexUser.index',['users'=>$usuarios]); 
     }
+<<<<<<< HEAD
     //
 }
+=======
+}
+>>>>>>> e043b7c (creacion de la primera vista)
