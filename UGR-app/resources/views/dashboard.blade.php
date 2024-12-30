@@ -1,4 +1,5 @@
 <x-app-layout>
+<<<<<<< HEAD
     <div class="degrade dividido">
         <div class="col s4 m2 l3 logo-escudo img1 responsive-img ima">
             <img class="responsive-img ima" src="{{ asset('img/MarcaDep1.png') }}" alt="Logo">
@@ -21,11 +22,30 @@
 
 <div class="mt-16">
     <div class="pri ">
+=======
+    <div class="degrade row">
+        <div class="col s4 m2 l3 logo-escudo">
+            <a>
+          <img class="img1 responsive-img" src="{{ asset('img/logoGob1.jpg') }}" alt="Logo">
+            </a>
+        </div>
+        <div class="col s4 m8 l3 pull-m2 pull-l3">
+            <h4 > CENTRO DE MONITOREO E INFORMACIÓN</h4>
+            <h5>PARA LA GESTIÓN DE RIESGOS Y DESASTRES</h5>
+        </div>
+        <div class="col s4 m8 l3 logo-escudo">
+            <img class="img1 responsive-img" src="{{ asset('img/logoGob1.jpg') }}" alt="Logo">
+        </div>
+     </div>
+<div class="container">
+    <div class="pri">
+>>>>>>> 3b5853f (modificacion de la primera vista v2)
         <div class="container">
                 <h6>
                 El Centro de Monitoreo e Información es un espacio de centralización de la información referida a la gestión del riesgo de desastres del Departamento de Cochabamba. Depende de la repartición de gestión del riesgo del Ejecutivo Departamental y se estructura a través de los siguientes sistemas:
                 </h6>
         </div>
+<<<<<<< HEAD
         <div class="si grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             
             <div class="col s12 m4  l3 ">
@@ -74,13 +94,53 @@
                             <p >Articulación de acciones para las operaciones, logística e información para una respuesta coordinada ante eventos adversos.</p>
                     </div>
                 </a>
+=======
+        <div class="si">
+            <div class="col s12 m4  l3 ">
+                <a href=#modulo1 class="mod">
+                    <div class="cardPanel hoverable ">
+                        <h4 class=" uppercase">Sistema de administración de datos</h4>
+                           <p class="color1">
+                             Base de datos de eventos adversos, afectaciones y daños. Los datos provienen de la evaluación de daños y análisis de necesidades. </p>
+                    </div>
+                </a>
+>>>>>>> 3b5853f (modificacion de la primera vista v2)
+            </div>
+            <div class="col s12 m4 l3 ">
+                <a href=#modulo1 class="mod">
+                    <div class="cardPanel hoverable">
+                       <div>
+                         <h4 class="uppercase">Sistema de alerta temprana departamental</h4>
+                           <p class="color1">Vigilancia y monitoreo de amenazas probables frente a condiciones de vulnerabilidades existentes.</p>
+                       </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4 l3 ">
+                <a href=#modulo1 class="mod">
+                    <div class="cardPanel hoverable ">
+                        <h4 class="uppercase">Sistema de gestión del conocimiento</h4>
+                           <p class="color1">Transferencia de conocimientos y experiencias para contribuir a la resiliencia e instaurar una cultura de prevención.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="col s12 m4 l3 ">
+                <a href=#modulo1 class="mod">
+                    <div class="cardPanel hoverable ">
+                        <h4 class="uppercase">Sistema de coordinación de respuesta</h4>
+                            <p class="color1">Articulación de acciones para las operaciones, logística e información para una respuesta coordinada ante eventos adversos.</p>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
+<<<<<<< HEAD
+=======
 </div>  
 <footer class="footer">
   <div class="row">
   </div>
 </footer>   
    
+>>>>>>> 3b5853f (modificacion de la primera vista v2)
 </x-app-layout>
